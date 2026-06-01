@@ -80,7 +80,13 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-5 text-center text-xs text-ink-100/40">
-        © {new Date().getFullYear()} ShopVerse · Quality Guaranteed · Worldwide Delivery · After-Sale Service
+        <p>© {new Date().getFullYear()} ShopVerse · Quality Guaranteed · Worldwide Delivery · After-Sale Service</p>
+        <p className="mt-2 text-ink-100/70">
+          Designed &amp; Developed by{" "}
+          <span className="font-semibold text-gold-400">Hamza Mehdi</span>
+          {" · "}
+          <span className="font-semibold text-gold-400">HM Solutions</span>
+        </p>
       </div>
     </footer>
   );

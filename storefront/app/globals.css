@@ -78,15 +78,8 @@ input[type="number"]::-webkit-inner-spin-button {
   background: linear-gradient(90deg, #c9a227, #e2c275);
 }
 
-/* Marquee for announcement bar (mobile) */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Hide scrollbar utility */
+/* Hide scrollbar utility (Chrome / Edge / Safari) */
 .no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* Fade-in for carousel slides */
 @keyframes fadeIn {
