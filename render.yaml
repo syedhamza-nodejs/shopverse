@@ -1,0 +1,22 @@
+# Render Blueprint for the ShopVerse backend API
+# In Render: New + → Blueprint → connect this repo → it reads this file.
+services:
+  - type: web
+    name: shopverse-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false      # paste your Atlas connection string in the dashboard
+      - key: JWT_SECRET
+        sync: false      # paste a long random secret in the dashboard
+      - key: CLIENT_URL
+        sync: false      # your Vercel storefront URL (set after deploying it)
+      - key: ADMIN_URL
+        sync: false      # your Vercel admin URL (set after deploying it)

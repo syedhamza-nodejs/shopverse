@@ -1,0 +1,19 @@
+# dependencies
+**/node_modules
+
+# env files (NEVER commit secrets)
+**/.env
+**/.env.local
+backend/.env
+storefront/.env.local
+admin/.env
+
+# builds
+storefront/.next
+admin/dist
+**/dist
+
+# misc
+*.log
+.DS_Store
+.vercel
