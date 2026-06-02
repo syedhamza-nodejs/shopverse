@@ -54,7 +54,7 @@ export default function Navbar() {
               placeholder="Search for products, brands and categories…"
               className="w-full rounded-l-full border border-ink-100 bg-ink-50 px-5 py-2.5 text-sm outline-none focus:border-gold-500"
             />
-            <button className="rounded-r-full bg-ink-900 px-6 text-sm font-semibold text-gold-400 hover:bg-ink-800">
+            <button className="rounded-r-full bg-gold-500 px-6 text-sm font-semibold text-ink-900 hover:bg-gold-400">
               Search
             </button>
           </form>

@@ -20,14 +20,14 @@ export default function AddToCart({ product }) {
       <button
         onClick={() => add(product, qty)}
         disabled={out}
-        className="rounded-sm bg-ink-900 px-8 py-3 text-sm font-bold uppercase tracking-wider text-gold-400 transition hover:bg-ink-800 disabled:bg-ink-100 disabled:text-ink-700/40"
+        className="rounded-sm bg-gold-500 px-8 py-3 text-sm font-bold uppercase tracking-wider text-ink-900 transition hover:bg-gold-400 disabled:bg-ink-100 disabled:text-ink-700/40"
       >
         {out ? "Out of Stock" : "Add to Cart"}
       </button>
       <button
         onClick={() => { add(product, qty); router.push("/cart"); }}
         disabled={out}
-        className="rounded-sm bg-gold-500 px-8 py-3 text-sm font-bold uppercase tracking-wider text-ink-900 transition hover:bg-gold-400 disabled:bg-ink-100 disabled:text-ink-700/40"
+        className="rounded-sm border-2 border-ink-900 px-8 py-3 text-sm font-bold uppercase tracking-wider text-ink-900 transition hover:bg-ink-900 hover:text-gold-400 disabled:border-ink-100 disabled:text-ink-700/40"
       >
         Buy Now
       </button>

@@ -57,7 +57,7 @@ export default function Filters({ category }) {
           <input type="number" placeholder="Max" value={max} onChange={(e) => setMax(e.target.value)}
             className="w-full rounded-sm border border-ink-100 px-2 py-1.5 text-sm outline-none focus:border-gold-500" />
         </div>
-        <button onClick={() => update({ min, max })} className="mt-2 w-full rounded-sm bg-ink-900 py-2 text-xs font-bold uppercase tracking-wider text-gold-400 hover:bg-ink-800">
+        <button onClick={() => update({ min, max })} className="mt-2 w-full rounded-sm bg-gold-500 py-2 text-xs font-bold uppercase tracking-wider text-ink-900 hover:bg-gold-400">
           Apply Price
         </button>
       </div>

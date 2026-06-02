@@ -66,7 +66,7 @@ export default function ReviewForm({ productId, slug }) {
           />
           {err && <p className="text-sm text-red-500">{err}</p>}
           {msg && <p className="text-sm text-green-700">{msg}</p>}
-          <button disabled={loading} className="w-full rounded-sm bg-ink-900 py-2.5 text-sm font-bold uppercase tracking-wider text-gold-400 hover:bg-ink-800 disabled:opacity-60">
+          <button disabled={loading} className="w-full rounded-sm bg-gold-500 py-2.5 text-sm font-bold uppercase tracking-wider text-ink-900 hover:bg-gold-400 disabled:opacity-60">
             {loading ? "Submitting…" : "Submit Review"}
           </button>
         </form>

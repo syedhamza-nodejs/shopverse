@@ -21,7 +21,7 @@ export default function WishlistPage() {
         <p className="text-6xl text-gold-500">♡</p>
         <h1 className="mt-4 font-display text-2xl font-bold">Your wishlist is empty</h1>
         <p className="mt-2 text-ink-700/60">Save your favourite items here for later.</p>
-        <Link href="/products" className="mt-6 inline-block rounded-sm bg-ink-900 px-6 py-3 text-sm font-bold uppercase tracking-wider text-gold-400 hover:bg-ink-800">
+        <Link href="/products" className="mt-6 inline-block rounded-sm bg-gold-500 px-6 py-3 text-sm font-bold uppercase tracking-wider text-ink-900 hover:bg-gold-400">
           Browse Products
         </Link>
       </div>
