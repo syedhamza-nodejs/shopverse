@@ -41,7 +41,7 @@ export default function RegisterPage() {
           onChange={(e) => setForm({ ...form, password: e.target.value })}
           className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-gold-500" />
         {err && <p className="text-sm text-red-500">{err}</p>}
-        <button disabled={loading} className="w-full rounded-lg bg-ink-900 py-3 font-semibold text-white hover:bg-ink-900 disabled:opacity-60">
+        <button disabled={loading} className="w-full rounded-lg bg-ink-900 py-3 font-semibold text-gold-400 hover:bg-ink-800 disabled:opacity-60">
           {loading ? "Creating…" : "Create Account"}
         </button>
       </form>

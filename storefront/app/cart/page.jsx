@@ -24,7 +24,7 @@ export default function CartPage() {
       <div className="mx-auto max-w-7xl px-4 py-20 text-center">
         <p className="text-6xl">🛒</p>
         <h1 className="mt-4 text-2xl font-bold">Your cart is empty</h1>
-        <Link href="/products" className="mt-6 inline-block rounded-lg bg-ink-900 px-6 py-3 font-semibold text-white hover:bg-ink-900">
+        <Link href="/products" className="mt-6 inline-block rounded-lg bg-ink-900 px-6 py-3 font-semibold text-gold-400 hover:bg-ink-800">
           Start Shopping
         </Link>
       </div>
@@ -66,7 +66,7 @@ export default function CartPage() {
             <div className="my-2 border-t border-slate-200" />
             <div className="flex justify-between text-base font-bold"><span>Total</span><Price amount={sub + shipping} className="text-ink-900" /></div>
           </div>
-          <Link href="/checkout" className="mt-5 block rounded-lg bg-ink-900 py-3 text-center font-semibold text-white hover:bg-ink-900">
+          <Link href="/checkout" className="mt-5 block rounded-lg bg-ink-900 py-3 text-center font-semibold text-gold-400 hover:bg-ink-800">
             Proceed to Checkout
           </Link>
         </div>

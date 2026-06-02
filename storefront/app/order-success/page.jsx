@@ -14,7 +14,7 @@ function Success() {
         {id && <> Your order ID is <span className="font-mono text-sm">{id}</span>.</>}
       </p>
       <div className="mt-6 flex justify-center gap-3">
-        <Link href="/account" className="rounded-lg bg-ink-900 px-5 py-3 font-semibold text-white hover:bg-ink-900">View Orders</Link>
+        <Link href="/account" className="rounded-lg bg-ink-900 px-5 py-3 font-semibold text-gold-400 hover:bg-ink-800">View Orders</Link>
         <Link href="/products" className="rounded-lg border border-slate-300 px-5 py-3 font-semibold hover:border-gold-500">Keep Shopping</Link>
       </div>
     </div>

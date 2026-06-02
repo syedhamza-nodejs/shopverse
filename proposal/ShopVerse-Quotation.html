@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ShopVerse — Project Quotation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink:#0a0a0c; --ink2:#1f1f23; --gold:#c9a227; --gold2:#e2c275; --muted:#6b7280; --line:#e7e7e9; --cream:#faf8f3; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink2); background: #f3f4f6; padding: 24px; }
+  .page { max-width: 820px; margin: 0 auto; background:#fff; box-shadow:0 10px 40px rgba(0,0,0,.08); }
+  .display { font-family:'Playfair Display', serif; }
+  .gold { color: var(--gold); }
+
+  /* Header */
+  header { background: var(--ink); color:#fff; padding: 36px 44px; display:flex; justify-content:space-between; align-items:flex-start; }
+  header .brand { font-family:'Playfair Display',serif; font-size: 30px; font-weight:800; }
+  header .brand span { background:linear-gradient(90deg,#c9a227,#e2c275); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  header .tag { color:#c9a227; font-size:11px; letter-spacing:3px; text-transform:uppercase; margin-top:6px; }
+  header .qbox { text-align:right; font-size:12px; color:#cbd5e1; }
+  header .qbox b { color:#fff; }
+  header .qtitle { font-family:'Playfair Display',serif; font-size:20px; color:#fff; letter-spacing:2px; }
+
+  .body { padding: 36px 44px; }
+  .row { display:flex; gap:24px; margin-bottom: 28px; }
+  .card { flex:1; border:1px solid var(--line); border-radius:8px; padding:16px 18px; }
+  .card h4 { font-size:11px; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold); margin-bottom:8px; }
+  .card p { font-size:14px; line-height:1.6; }
+  .muted { color: var(--muted); }
+
+  h2.sec { font-family:'Playfair Display',serif; font-size:20px; margin: 26px 0 6px; }
+  .rule { height:2px; width:54px; background:linear-gradient(90deg,#c9a227,#e2c275); margin-bottom:16px; }
+
+  .demo { background:var(--cream); border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:8px; }
+  .demo a { color:#1d4ed8; text-decoration:none; font-weight:600; }
+
+  ul.feat { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:8px 24px; margin-top:6px; }
+  ul.feat li { font-size:13.5px; padding-left:20px; position:relative; line-height:1.5; }
+  ul.feat li:before { content:"✦"; color:var(--gold); position:absolute; left:0; }
+
+  table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+  th, td { text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); }
+  th { background:var(--ink); color:#fff; font-size:11px; text-transform:uppercase; letter-spacing:1px; font-weight:600; }
+  td.amt, th.amt { text-align:right; white-space:nowrap; }
+  tr.total td { font-weight:700; font-size:16px; background:var(--cream); border-top:2px solid var(--gold); }
+  .badge { display:inline-block; font-size:10px; background:var(--cream); color:var(--gold); border:1px solid var(--gold); border-radius:4px; padding:2px 7px; text-transform:uppercase; letter-spacing:.5px; }
+
+  .terms { display:flex; gap:24px; margin-top:8px; }
+  .terms .card p { font-size:13px; }
+
+  footer { background:var(--ink); color:#cbd5e1; padding:22px 44px; font-size:12.5px; display:flex; justify-content:space-between; align-items:center; }
+  footer .gold { color:var(--gold2); }
+  .note { font-size:11px; color:var(--muted); margin-top:6px; font-style:italic; }
+
+  @media print {
+    body { background:#fff; padding:0; }
+    .page { box-shadow:none; max-width:100%; }
+    .noprint { display:none !important; }
+  }
+  .printbar { max-width:820px; margin:0 auto 16px; text-align:right; }
+  .printbar button { background:var(--ink); color:var(--gold2); border:none; padding:10px 20px; border-radius:6px; font-weight:600; cursor:pointer; font-size:13px; }
+</style>
+</head>
+<body>
+
+<div class="printbar noprint">
+  <button onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<div class="page">
+  <header>
+    <div>
+      <div class="brand"><span>Shop</span>Verse</div>
+      <div class="tag">Web Development Services</div>
+    </div>
+    <div class="qbox">
+      <div class="qtitle">QUOTATION</div>
+      <div style="margin-top:8px;">Quote #: <b>SV-2026-001</b></div>
+      <div>Date: <b>[Edit Date]</b></div>
+      <div>Valid for: <b>15 days</b></div>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <div class="row">
+      <div class="card">
+        <h4>From</h4>
+        <p><b>[Your Name]</b><br/>
+        Full-Stack Web Developer<br/>
+        📞 [Your Phone]<br/>
+        ✉️ cdistrix@gmail.com</p>
+      </div>
+      <div class="card">
+        <h4>Prepared For</h4>
+        <p><b>[Client Name]</b><br/>
+        [Client Business / Brand]<br/>
+        [Client Phone / Email]</p>
+      </div>
+    </div>
+
+    <h2 class="sec">Project Overview</h2>
+    <div class="rule"></div>
+    <p style="font-size:14px; line-height:1.7;">A premium, fully-responsive <b>multi-category eCommerce website</b> built on a modern
+    full-stack architecture (MERN + Next.js). Includes a customer storefront, a complete admin dashboard,
+    secure user accounts, online payments, and a fast, SEO-friendly luxury design. The platform is fully
+    dynamic — products, banners, pricing, currencies and content are all manageable without touching code.</p>
+
+    <h2 class="sec">Live Demo</h2>
+    <div class="rule"></div>
+    <div class="demo">
+      🛍️ <b>Storefront:</b> <a href="https://shopverse-iota.vercel.app">https://shopverse-iota.vercel.app</a><br/>
+      🔧 <b>Admin Panel:</b> <a href="https://shopverse-xsaz.vercel.app">https://shopverse-xsaz.vercel.app</a>
+      <span class="muted">(login provided on request)</span>
+    </div>
+
+    <h2 class="sec">What's Included</h2>
+    <div class="rule"></div>
+    <ul class="feat">
+      <li>Luxury responsive storefront (mobile + desktop)</li>
+      <li>Product catalog with search, filters &amp; sorting</li>
+      <li>Shopping cart &amp; secure checkout</li>
+      <li>Customer accounts &amp; order history</li>
+      <li>Wishlist &amp; product reviews</li>
+      <li>Multi-currency support (PKR / USD / AED / GBP)</li>
+      <li>Full admin dashboard (products, orders, banners)</li>
+      <li>Dynamic homepage (hero slider, deals, sections)</li>
+      <li>Cash on Delivery + card payment ready</li>
+      <li>SEO-friendly, fast-loading (Next.js)</li>
+    </ul>
+
+    <h2 class="sec">Investment</h2>
+    <div class="rule"></div>
+    <table>
+      <thead>
+        <tr><th>Item</th><th class="amt">Amount (PKR)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Storefront — luxury responsive design (Next.js)</td><td class="amt">45,000</td></tr>
+        <tr><td>Backend API + Database (auth, products, orders, payments)</td><td class="amt">40,000</td></tr>
+        <tr><td>Admin dashboard (manage everything)</td><td class="amt">25,000</td></tr>
+        <tr><td>Deployment, setup &amp; configuration</td><td class="amt">10,000</td></tr>
+        <tr class="total"><td>Total (One-Time Development)</td><td class="amt">PKR 1,20,000</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="sec">Optional Add-Ons <span class="badge">on request</span></h2>
+    <div class="rule"></div>
+    <table>
+      <tbody>
+        <tr><td>Live payment gateway integration (JazzCash / Easypaisa / Stripe)</td><td class="amt">25,000</td></tr>
+        <tr><td>Custom domain setup + SSL (e.g. yourstore.com)</td><td class="amt">8,000</td></tr>
+        <tr><td>Product data entry (per 50 products)</td><td class="amt">10,000</td></tr>
+        <tr><td>Logo &amp; brand identity design</td><td class="amt">15,000</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="sec">Recurring Costs (Yearly / Monthly)</h2>
+    <div class="rule"></div>
+    <table>
+      <tbody>
+        <tr><td>Domain registration (.com)</td><td class="amt">~3,500 / year</td></tr>
+        <tr><td>Premium hosting (always-on, no delays)</td><td class="amt">~3,000 / month</td></tr>
+        <tr><td>Maintenance &amp; support <span class="muted">(optional)</span></td><td class="amt">8,000 / month</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Note: The demo currently runs on free hosting (fine for testing). For a live business, premium hosting is recommended to avoid loading delays.</p>
+
+    <h2 class="sec">Terms</h2>
+    <div class="rule"></div>
+    <div class="terms">
+      <div class="card"><h4>Payment</h4><p>50% advance to begin work, 50% on final delivery.</p></div>
+      <div class="card"><h4>Timeline</h4><p>Delivery within 7–10 working days after advance &amp; content.</p></div>
+      <div class="card"><h4>Support</h4><p>1 month free support after delivery (bug fixes).</p></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div>Thank you for considering <span class="gold">ShopVerse</span> for your project.</div>
+    <div>📞 [Your Phone] &nbsp;·&nbsp; ✉️ cdistrix@gmail.com</div>
+  </footer>
+</div>
+
+</body>
+</html>
