@@ -5,7 +5,7 @@ import { useSettings } from "@/store/settings";
 export default function Footer() {
   const data = useSettings((s) => s.data);
   return (
-    <footer className="mt-20 bg-ink-900 text-ink-100">
+    <footer className="mt-20 bg-green-900 text-ink-100">
       {/* newsletter */}
       <div className="border-b border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-10 text-center md:flex-row md:justify-between md:text-left">

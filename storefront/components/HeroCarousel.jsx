@@ -32,7 +32,7 @@ export default function HeroCarousel({ banners }) {
           className="absolute inset-0"
         >
           <Image src={s.image} alt={s.title} fill priority sizes="100vw" className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-ink-900/90 via-ink-900/55 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/92 via-green-900/60 to-transparent" />
         </motion.div>
       </AnimatePresence>
 

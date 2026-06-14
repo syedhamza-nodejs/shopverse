@@ -101,8 +101,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Category nav bar (black) */}
-      <div className="hidden md:block bg-ink-900 text-ink-100">
+      {/* Category nav bar (Islamic green) */}
+      <div className="hidden md:block bg-green-900 text-ink-100">
         <div className="mx-auto flex h-12 max-w-7xl items-center gap-7 px-4 text-sm font-medium overflow-x-auto no-scrollbar">
           <Link href="/products" className="whitespace-nowrap font-semibold text-gold-400 hover:text-gold-400">
             ▦ All Products

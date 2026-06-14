@@ -7,17 +7,30 @@ import Product from "../models/Product.js";
 import Setting from "../models/Setting.js";
 import Banner from "../models/Banner.js";
 
-const img = (seed) => `https://picsum.photos/seed/${seed}/700/700`;
+// Keyword-based images so each product/category picture matches its name
+const flickr = (kw, lock) => `https://loremflickr.com/600/600/${encodeURIComponent(kw)}?lock=${lock}`;
+
+// keyword per category (used for category thumbnails + their products' images)
+const catKw = {
+  "Tabarukat": "mosque",
+  "Banners & Alam": "calligraphy",
+  "Aqeeq & Rings": "ring",
+  "Taveezat": "pendant",
+  "Tasbeeh & Janamaz": "rosary",
+  "Hijab & Chadar": "hijab",
+  "Islamic Books": "quran",
+  "Attar & Fragrance": "perfume",
+};
 
 const categories = [
-  { name: "Tabarukat", featured: true, image: img("cat-tabarukat"), description: "Blessed items (tabarruk) from the holy shrines" },
-  { name: "Banners & Alam", featured: true, image: img("cat-banners"), description: "Irani velvet banners & alam of the Masaib" },
-  { name: "Aqeeq & Rings", featured: true, image: img("cat-aqeeq"), description: "Yamani, Sulaimani & Firoza silver rings" },
-  { name: "Taveezat", featured: true, image: img("cat-taveezat"), description: "Authentic hirz & taveezat" },
-  { name: "Tasbeeh & Janamaz", featured: false, image: img("cat-tasbeeh"), description: "Tasbeeh, mohr & prayer mats" },
-  { name: "Hijab & Chadar", featured: false, image: img("cat-hijab"), description: "Namazi chadar, abaya & hijab" },
-  { name: "Islamic Books", featured: false, image: img("cat-books"), description: "Quran, Mafatih, duas & ziyarat" },
-  { name: "Attar & Fragrance", featured: false, image: img("cat-attar"), description: "Mushk, oud & natural attar" },
+  { name: "Tabarukat", featured: true, image: flickr("mosque", 11), description: "Blessed items (tabarruk) from the holy shrines" },
+  { name: "Banners & Alam", featured: true, image: flickr("calligraphy", 12), description: "Irani velvet banners & alam of the Masaib" },
+  { name: "Aqeeq & Rings", featured: true, image: flickr("ring", 13), description: "Yamani, Sulaimani & Firoza silver rings" },
+  { name: "Taveezat", featured: true, image: flickr("pendant", 14), description: "Authentic hirz & taveezat" },
+  { name: "Tasbeeh & Janamaz", featured: false, image: flickr("rosary", 15), description: "Tasbeeh, mohr & prayer mats" },
+  { name: "Hijab & Chadar", featured: false, image: flickr("hijab", 16), description: "Namazi chadar, abaya & hijab" },
+  { name: "Islamic Books", featured: false, image: flickr("quran", 17), description: "Quran, Mafatih, duas & ziyarat" },
+  { name: "Attar & Fragrance", featured: false, image: flickr("perfume", 18), description: "Mushk, oud & natural attar" },
 ];
 
 // p(name, brand, price, compareAt, desc, highlights[], specs{}, badges[])
@@ -207,9 +220,9 @@ const productsByCat = {
 };
 
 const banners = [
-  { eyebrow: "From the Holy Shrines", title: "Authentic Tabarukat of Karbala, Najaf & Qom", subtitle: "Blessed turbah, ziyarat cloth & sacred keepsakes — sourced with reverence.", image: img("hero-tabarukat-x"), ctaText: "Explore Tabarukat", ctaLink: "/category/tabarukat", order: 1 },
-  { eyebrow: "Irani Velvet Collection", title: "Banners & Alam of the Masaib", subtitle: "Premium velvet banners of the Ahlebait (a.s) for your azakhana & home.", image: img("hero-banners-x"), ctaText: "View Banners", ctaLink: "/category/banners-alam", order: 2 },
-  { eyebrow: "The Sunnah Stone", title: "Yamani Aqeeq & Silver Rings", subtitle: "Handcrafted aqeeq, firoza & sulaimani rings in pure silver.", image: img("hero-aqeeq-x"), ctaText: "Shop Rings", ctaLink: "/category/aqeeq-rings", order: 3 },
+  { eyebrow: "From the Holy Shrines", title: "Authentic Tabarukat of Karbala, Najaf & Qom", subtitle: "Blessed turbah, ziyarat cloth & sacred keepsakes — sourced with reverence.", image: flickr("mosque", 101), ctaText: "Explore Tabarukat", ctaLink: "/category/tabarukat", order: 1 },
+  { eyebrow: "Irani Velvet Collection", title: "Banners & Alam of the Masaib", subtitle: "Premium velvet banners of the Ahlebait (a.s) for your azakhana & home.", image: flickr("calligraphy", 102), ctaText: "View Banners", ctaLink: "/category/banners-alam", order: 2 },
+  { eyebrow: "The Sunnah Stone", title: "Yamani Aqeeq & Silver Rings", subtitle: "Handcrafted aqeeq, firoza & sulaimani rings in pure silver.", image: flickr("ring", 103), ctaText: "Shop Rings", ctaLink: "/category/aqeeq-rings", order: 3 },
 ];
 
 const run = async () => {
@@ -246,12 +259,13 @@ const run = async () => {
 
   let count = 0;
   for (const [catName, list] of Object.entries(productsByCat)) {
+    const kw = catKw[catName] || "islamic";
     for (const item of list) {
-      const seed = item.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 28);
+      const base = 200 + count * 4;
       await new Product({
         ...item,
         category: catDocs[catName]._id,
-        images: [img(seed), img(seed + "-b"), img(seed + "-c"), img(seed + "-d")],
+        images: [flickr(kw, base), flickr(kw, base + 1), flickr(kw, base + 2), flickr(kw, base + 3)],
         countInStock: 15 + (item.price % 20),
         rating: Math.min(5, 4 + ((item.price % 10) / 10)),
         numReviews: 6 + (item.price % 50),

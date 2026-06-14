@@ -11,6 +11,11 @@
   --color-gold-500: #c9a227;
   --color-gold-600: #a9851a;
   --color-cream: #faf8f3;
+  /* Islamic emerald green */
+  --color-green-600: #12805f;
+  --color-green-700: #0f6b51;
+  --color-green-800: #0a5240;
+  --color-green-900: #06392c;
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-playfair), Georgia, serif;

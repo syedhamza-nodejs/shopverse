@@ -38,6 +38,14 @@ export default async function HomePage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4">
+      {/* Bismillah */}
+      <div className="mt-5 text-center">
+        <p className="font-display text-xl text-green-800 md:text-2xl" dir="rtl" lang="ar">
+          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+        </p>
+        <div className="gold-rule mx-auto mt-2" />
+      </div>
+
       <section className="mt-6">
         <HeroCarousel banners={banners} />
       </section>
@@ -76,7 +84,7 @@ export default async function HomePage() {
 
       {/* Editorial banner */}
       <Reveal className="mt-14">
-        <section className="overflow-hidden rounded-2xl bg-ink-900">
+        <section className="overflow-hidden rounded-2xl bg-green-900">
           <div className="flex flex-col items-center gap-4 px-8 py-12 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-400">Gifts of Barakah</p>
             <h2 className="max-w-xl font-display text-3xl font-bold text-white md:text-4xl">

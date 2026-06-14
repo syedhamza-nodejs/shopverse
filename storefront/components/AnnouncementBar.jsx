@@ -14,7 +14,7 @@ export default function AnnouncementBar() {
   }, [messages.length]);
 
   return (
-    <div className="bg-ink-900 text-gold-400">
+    <div className="bg-green-900 text-gold-400">
       <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs tracking-wide">
         <span className="hidden sm:block text-ink-100/70">{data.hours}</span>
         <p className="animate-fade font-medium" key={i}>
