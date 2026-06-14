@@ -15,12 +15,12 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   title: {
-    default: "ShopVerse — Luxury Shopping, Delivered",
-    template: "%s | ShopVerse",
+    default: "Al-Tabarukat — Authentic Tabarukat, Banners & Islamic Gifts",
+    template: "%s | Al-Tabarukat",
   },
   description:
-    "ShopVerse — a premium multi-category online store. Curated electronics, fashion, home, beauty and more with worldwide delivery.",
-  keywords: ["luxury shopping", "ecommerce", "premium store", "online shopping", "Pakistan"],
+    "Al-Tabarukat — authentic tabarukat from Karbala, Najaf & Qom, Irani velvet banners, aqeeq & silver rings, taveezat, tasbeeh, books and attar. Worldwide delivery.",
+  keywords: ["tabarukat", "aqeeq ring", "irani banners", "khak e shifa", "shia islamic store", "azadari", "Pakistan"],
 };
 
 export default function RootLayout({ children }) {

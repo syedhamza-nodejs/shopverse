@@ -78,12 +78,12 @@ export default async function HomePage() {
       <Reveal className="mt-14">
         <section className="overflow-hidden rounded-2xl bg-ink-900">
           <div className="flex flex-col items-center gap-4 px-8 py-12 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-400">Members Save More</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-400">Gifts of Barakah</p>
             <h2 className="max-w-xl font-display text-3xl font-bold text-white md:text-4xl">
               Get <span className="text-gold-gradient">10% Off</span> on orders over Rs 15,000
             </h2>
             <p className="max-w-md text-sm text-ink-100/70">
-              Plus free delivery on every online payment. Quality guaranteed, worldwide shipping.
+              Authentic tabarukat &amp; gifts for your loved ones. Free delivery on online payments, worldwide shipping.
             </p>
             <Link href="/products" className="mt-2 rounded-sm bg-gold-500 px-8 py-3 text-sm font-bold uppercase tracking-wider text-ink-900 hover:bg-gold-400">
               Shop the Collection

@@ -10,8 +10,8 @@ export default function Footer() {
       <div className="border-b border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-10 text-center md:flex-row md:justify-between md:text-left">
           <div>
-            <h3 className="font-display text-2xl font-bold text-white">Join the ShopVerse Inner Circle</h3>
-            <p className="mt-1 text-sm text-ink-100/60">Exclusive offers, new arrivals & early access — straight to your inbox.</p>
+            <h3 className="font-display text-2xl font-bold text-white">Join the Al-Tabarukat Family</h3>
+            <p className="mt-1 text-sm text-ink-100/60">New arrivals, special tabarukat & offers — straight to your inbox.</p>
           </div>
           <form className="flex w-full max-w-md">
             <input
@@ -29,11 +29,10 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <div className="font-display text-2xl font-bold">
-            <span className="text-gold-gradient">Shop</span>
-            <span className="text-white">Verse</span>
+            <span className="text-gold-gradient">Al-Tabarukat</span>
           </div>
           <p className="mt-3 text-sm text-ink-100/60">
-            A premium multi-category store. Curated quality, worldwide delivery, and service you can trust.
+            Authentic tabarukat, banners, aqeeq & Islamic gifts — sourced with reverence from the holy shrines, delivered worldwide.
           </p>
           <div className="mt-4 flex gap-3 text-lg">
             <a href="#" aria-label="Facebook" className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-gold-500 hover:text-ink-900">f</a>
@@ -46,10 +45,10 @@ export default function Footer() {
           <h4 className="mb-3 font-semibold text-white">Shop</h4>
           <ul className="space-y-2 text-sm text-ink-100/60">
             <li><Link href="/products" className="hover:text-gold-400">All Products</Link></li>
-            <li><Link href="/category/electronics" className="hover:text-gold-400">Electronics</Link></li>
-            <li><Link href="/category/fashion" className="hover:text-gold-400">Fashion</Link></li>
-            <li><Link href="/category/home-kitchen" className="hover:text-gold-400">Home & Kitchen</Link></li>
-            <li><Link href="/products?sort=newest" className="hover:text-gold-400">New Arrivals</Link></li>
+            <li><Link href="/category/tabarukat" className="hover:text-gold-400">Tabarukat</Link></li>
+            <li><Link href="/category/banners-alam" className="hover:text-gold-400">Banners & Alam</Link></li>
+            <li><Link href="/category/aqeeq-rings" className="hover:text-gold-400">Aqeeq & Rings</Link></li>
+            <li><Link href="/category/islamic-books" className="hover:text-gold-400">Islamic Books</Link></li>
           </ul>
         </div>
 

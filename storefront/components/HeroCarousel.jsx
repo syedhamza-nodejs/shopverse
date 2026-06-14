@@ -5,8 +5,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const fallback = [
-  { eyebrow: "The Tech Edit", title: "Premium Electronics, Curated for You", subtitle: "Flagship phones, audio & laptops — up to 40% off.", ctaLink: "/category/electronics", ctaText: "Shop Electronics", image: "https://picsum.photos/seed/lux-electronics/1600/700" },
-  { eyebrow: "Signature Style", title: "Fashion that Defines You", subtitle: "Handpicked apparel, footwear & accessories.", ctaLink: "/category/fashion", ctaText: "Explore Fashion", image: "https://picsum.photos/seed/lux-fashion/1600/700" },
+  { eyebrow: "From the Holy Shrines", title: "Authentic Tabarukat of Karbala, Najaf & Qom", subtitle: "Blessed turbah, ziyarat cloth & sacred keepsakes — sourced with reverence.", ctaLink: "/category/tabarukat", ctaText: "Explore Tabarukat", image: "https://picsum.photos/seed/hero-tabarukat-x/1600/700" },
+  { eyebrow: "Irani Velvet Collection", title: "Banners & Alam of the Masaib", subtitle: "Premium velvet banners of the Ahlebait (a.s) for your azakhana & home.", ctaLink: "/category/banners-alam", ctaText: "View Banners", image: "https://picsum.photos/seed/hero-banners-x/1600/700" },
 ];
 
 export default function HeroCarousel({ banners }) {

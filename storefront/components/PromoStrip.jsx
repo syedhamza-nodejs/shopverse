@@ -1,7 +1,7 @@
 const items = [
-  { icon: "✦", title: "Quality Guaranteed", sub: "100% authentic products" },
+  { icon: "✦", title: "100% Authentic", sub: "Genuine tabarukat & stones" },
+  { icon: "🕋", title: "From Holy Shrines", sub: "Karbala · Najaf · Qom" },
   { icon: "🌍", title: "Worldwide Delivery", sub: "We ship across the globe" },
-  { icon: "↺", title: "Easy Returns", sub: "7-day hassle-free returns" },
   { icon: "☎", title: "After-Sale Service", sub: "Dedicated support team" },
 ];
 

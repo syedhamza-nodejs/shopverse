@@ -1,14 +1,14 @@
 const reviews = [
-  { name: "Ayesha K.", city: "Karachi", text: "Beautiful packaging and the quality exceeded my expectations. ShopVerse is now my go-to for gifts.", rating: 5 },
-  { name: "Bilal R.", city: "Lahore", text: "Fast delivery and the product was exactly as described. The whole experience felt premium.", rating: 5 },
-  { name: "Sana M.", city: "Islamabad", text: "Loved the easy returns and the customer support on WhatsApp. Highly recommended!", rating: 5 },
+  { name: "Syed Ali R.", city: "Karachi", text: "The Khak-e-Shifa and turbah arrived beautifully packed and felt truly authentic. May Allah reward this service.", rating: 5 },
+  { name: "Fatima Z.", city: "Lahore", text: "Ordered an Irani velvet banner of Imam Hussain (a.s) for our azakhana — the quality is masha’Allah excellent.", rating: 5 },
+  { name: "Hussain A.", city: "Islamabad", text: "My Yamani aqeeq ring is genuine and beautifully crafted. Fast delivery and very helpful support on WhatsApp.", rating: 5 },
 ];
 
 export default function Testimonials() {
   return (
     <section className="mt-16">
       <div className="text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">Loved by Thousands</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">Trusted by Momineen</p>
         <h2 className="mt-1 font-display text-2xl font-bold md:text-3xl">What Our Customers Say</h2>
         <div className="gold-rule mx-auto mt-3" />
       </div>
